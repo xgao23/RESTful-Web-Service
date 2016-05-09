@@ -1,6 +1,7 @@
 package org.koushik.javabrains.messenger2.service;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 import java.util.Map;
 
@@ -26,6 +27,7 @@ public class MessageService {
 	}
 	
 	public Message addMessage(Message message){
+		message.setCreated(new Date());
 		message.setId(messages.size()+1);
 		messages.put(message.getId(), message);
 		return message;
