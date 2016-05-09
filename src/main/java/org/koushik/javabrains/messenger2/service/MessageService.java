@@ -12,7 +12,7 @@ public class MessageService {
 	
 	public MessageService(){
 		messages.put(1L,new Message(1L,"Hello world","Xian"));
-		messages.put(3L,new Message(2L,"Hello everyone","Xian"));
+		messages.put(2L,new Message(2L,"Hello everyone","Xian"));
 	}
 	
 	
