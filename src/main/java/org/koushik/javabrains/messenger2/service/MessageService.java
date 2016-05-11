@@ -34,8 +34,20 @@ public class MessageService {
 	}
 	public Message updateMessage(Message message){
 		if(message.getId()<=0) return null;
+		message.setCreated(new Date());
 		messages.put(message.getId(),message);
 		return message;
+	}
+
+
+
+	public boolean deleteMessage(Long id) {
+		// TODO Auto-generated method stub
+		if(messages.containsKey(id)){
+			messages.remove(id);
+			return true;
+		}
+		return false;
 	}
 
 }
